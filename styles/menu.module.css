@@ -1,0 +1,115 @@
+.background {
+  width: 100%;
+  background-color: var(--White);
+  height: 6.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.logo {
+  width: 4rem;
+  margin-right: auto;
+}
+
+.elements {
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.elements > h1 {
+  z-index: 1;
+}
+
+.elements > .svg {
+  position: absolute;
+  width: 8rem;
+  opacity: 0;
+  transform: translateY(1.85rem);
+  transition: all 250ms ease-in;
+}
+
+.elements:hover > .svg {
+  opacity: 1;
+  transform: translateY(1.35rem);
+}
+
+.hamburger {
+  display: none;
+  z-index: 5;
+  cursor: pointer;
+  width: 3.5rem;
+  color: var(--Secondary);
+}
+
+.hamburger-container {
+  background-color: var(--Backgound);
+  width: 100vw;
+  position: fixed;
+  z-index: 50;
+  height: calc(100vh - 6.875rem);
+  top: 6.875rem;
+  left: 0;
+  transform: translate(-100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 200ms ease-in;
+}
+
+.hamburger-active {
+  transform: translate(0);
+}
+
+.hamburger-contact > .cta-container-blue {
+  border: 0.9rem solid var(--Secondary);
+}
+
+.hamburger-contact > .cta-container {
+  padding: 1.25rem 6rem;
+  border-radius: 15rem;
+  box-shadow: none;
+}
+.hamburger-contact > .cta-container > .buttons-text {
+  font-size: 3.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .menu > .elements {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: unset !important;
+  }
+
+  .elements > .title {
+    font-size: 3.5rem !important;
+    z-index: 1;
+  }
+  .elements > .svg {
+    width: 12rem !important;
+    transform: translateY(3rem) !important;
+  }
+  .elements:hover > .svg {
+    transform: translateY(2.4rem) !important;
+  }
+}

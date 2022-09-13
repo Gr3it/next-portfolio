@@ -1,0 +1,55 @@
+.footer {
+  width: 100%;
+  background-color: var(--Black);
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 4.125rem;
+  height: 4.125rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: var(--White);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.email {
+  color: var(--White);
+  font-size: 1rem;
+}
+
+.copyright {
+  margin-top: auto;
+  color: var(--White60);
+  font-size: 0.875rem;
+  font-weight: 200;
+}

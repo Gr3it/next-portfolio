@@ -1,0 +1,11 @@
+.large {
+  max-width: 1800px;
+  width: 100%;
+  padding: 0rem 10rem;
+}
+
+.small {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0rem 10rem;
+}

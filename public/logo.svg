@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect id="Background" width="100" height="100" fill="#0d6ede"/>
+    <path d="M43.19,57.93v8.21h9.89v7.62H43.19v8.92H57.92v7.93H33.46V50H57.92v7.91Z" rx="6" transform="translate(0 -0.01)" fill="#fff"/>
+    <path d="M73.82,82.47H90.7v8.14H63V83L79.74,58.1H63V50H90.7v7.42Z" transform="translate(0 -0.01)" fill="#fff"/>
+</svg>

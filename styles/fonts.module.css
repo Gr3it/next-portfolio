@@ -1,0 +1,106 @@
+.home-subtitle {
+  font-size: 2.5rem;
+  color: var(--Black60);
+  font-weight: 300;
+}
+
+.home-title {
+  font-size: 8.75rem;
+  line-height: 11.25rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.buttons-text {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: inherit;
+  user-select: none;
+}
+
+.watermark-text {
+  font-size: 18.75rem;
+  font-weight: 700;
+  color: var(--Black5);
+  user-select: none;
+}
+
+.section-title {
+  z-index: 1;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.sub-section-title {
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 4.375rem;
+}
+
+.card-tags {
+  color: var(--Black60);
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 700;
+}
+
+.buttons-text-small {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--Secondary);
+  user-select: none;
+}
+
+.card-date-text {
+  font-size: 1.875rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 1.625rem;
+  color: var(--Black60);
+  font-weight: 300;
+  text-align: justify;
+}
+
+.passion-title {
+  font-size: 3.125rem;
+  font-weight: 600;
+}
+
+.cta-section-title {
+  font-size: 3.75rem;
+  font-weight: 600;
+  color: var(--White);
+  text-align: center;
+  z-index: inherit;
+}
+
+.resume-button {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: var(--White);
+  text-decoration: underline;
+}
+
+.contact-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.project-title {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.paragraph-justify {
+  font-size: 1.625rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 10rem 10rem;
+}
+
+.button {
+  border: 0.3rem solid var(--Secondary);
+  background-color: var(--Secondary);
+  color: var(--White);
+  padding: 0.5rem 3.5rem;
+  border-radius: 5rem;
+  text-decoration: none;
+}
+
+.watermark {
+  font-size: 18.75rem;
+  font-weight: 700;
+  color: var(--Black5);
+  user-select: none;
+  margin: -8rem 0;
+}
