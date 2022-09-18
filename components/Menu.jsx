@@ -4,6 +4,8 @@ import CTA from "./CTA";
 import MenuElement from "./MenuElement";
 import Container from "./container";
 
+//import useWindowSize from "../hook/useWindowSize";
+
 import styles from "../styles/menu.module.css";
 
 export default function Menu({ handleModalOpen }) {
@@ -15,35 +17,28 @@ export default function Menu({ handleModalOpen }) {
   ];
 
   const [hamburgerActive, setHamburgerActive] = useState(false);
+  const [width, setWidth] = useState(undefined);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleMenuClose = () => {
     setHamburgerActive(false);
     document.body.style.overflowY = "scroll";
   };
 
-  /*useEffect(() => {
-    const interval = setInterval(() => {
-      console.log(hamburgerActive);
-    }, 2000);
+  if (hamburgerActive && width > 800) {
+    handleMenuClose();
+  }
 
-    return () => {
-      clearInterval(interval);
-    };
-  });*/
-
-  const handleResize = () => {
-    console.log(hamburgerActive);
-  };
-
-  useEffect(() => {
-    /* Close the overlay menu if the width of the page increase over 800px*/
-    window.addEventListener("resize", () => {
-      handleResize();
-      if (hamburgerActive && window.innerWidth > 800) {
-        handleMenuClose();
-      }
-    });
-  }, []);
+  console.log(width);
 
   return (
     <header className={styles.background}>
