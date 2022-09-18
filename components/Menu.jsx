@@ -31,7 +31,7 @@ export default function Menu({ handleModalOpen }) {
 
   const handleMenuClose = () => {
     setHamburgerActive(false);
-    document.body.style.overflowY = "scroll";
+    document.body.style.overflowY = "";
   };
 
   if (hamburgerActive && width > 800) {
