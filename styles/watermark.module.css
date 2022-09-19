@@ -1,0 +1,13 @@
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: var(--Black5);
+}
+
+.text {
+  font-size: 18.75rem;
+  font-weight: 700;
+  color: inherit;
+  user-select: none;
+}

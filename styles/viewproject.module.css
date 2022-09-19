@@ -1,0 +1,63 @@
+.container {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-decoration: underline;
+  justify-content: center;
+  align-items: center;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.text {
+  text-decoration: underline;
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: inherit;
+  user-select: none;
+}
+
+.svg {
+  transform: translateY(10%);
+  width: 1.5rem;
+  height: 2rem;
+  animation: up-down 1.75s ease-in-out infinite;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(15%);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(15%);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate(-1px) scale(var(--ReCaptchaScale));
+  }
+
+  20%,
+  80% {
+    transform: translate(3px) scale(var(--ReCaptchaScale));
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate(-6px) scale(var(--ReCaptchaScale));
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0) scale(var(--ReCaptchaScale));
+  }
+}

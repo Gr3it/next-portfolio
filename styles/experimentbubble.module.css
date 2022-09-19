@@ -1,0 +1,78 @@
+.container {
+  position: relative;
+  border-radius: 50%;
+  border: 0.5rem solid var(--Secondary);
+  overflow: hidden;
+  box-shadow: 0 0 1rem 0rem var(--BlackShadow);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background 150ms ease-in;
+  transition-delay: 150ms;
+}
+
+.img-container {
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.img {
+  background-color: white;
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  width: 80%;
+  font-size: 3.125rem;
+  font-weight: 600;
+  line-height: 4.375rem;
+  opacity: 0;
+  color: white;
+  transition: all 200ms ease-out;
+  transform: translateY(-2rem);
+  overflow-wrap: break-word;
+}
+
+.git {
+  width: 5rem;
+  opacity: 0;
+  transform: rotate(-90deg);
+  transition: opacity 200ms ease-out, transform 300ms ease-in;
+}
+
+.container:hover > .title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container:hover > .git {
+  opacity: 1;
+  transform: rotate(0);
+  transition: all 300ms ease-out;
+  transition-delay: 175ms;
+}
+
+.container:hover > .background {
+  background-color: var(--Black60);
+  transition: background 100ms;
+}

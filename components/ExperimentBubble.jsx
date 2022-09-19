@@ -1,20 +1,35 @@
+import styles from "../styles/experimentbubble.module.css";
+import Image from "next/image";
+
 export default function ExperimentBubble({
   dimension = "31.25rem",
   title = "",
   link = "",
   img = "",
+  imgDimension = { width: 1000, height: 1000 },
 }) {
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="bubble-container"
+      className={styles.container}
       style={{ width: dimension, height: dimension }}
     >
-      <h1 className="bubble-title">{title}</h1>
+      <div className={styles["img-container"]}>
+        <div className={styles.img}>
+          <Image
+            src={"/images/" + img}
+            alt={img + " Preview"}
+            width={imgDimension.width}
+            height={imgDimension.height}
+          />
+        </div>
+      </div>
+      <div className={styles.background} />
+      <h1 className={styles.title}>{title}</h1>
       <svg
-        className="bubble-git"
+        className={styles.git}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 77.441 75.506"
       >
@@ -24,13 +39,6 @@ export default function ExperimentBubble({
           fill="#fff"
         />
       </svg>
-      <div className="bubble-img-container">
-        <img
-          className="bubble-img"
-          src={process.env.PUBLIC_URL + "/Assets/" + img}
-          alt={img + " Preview"}
-        />
-      </div>
     </a>
   );
 }

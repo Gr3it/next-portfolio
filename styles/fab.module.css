@@ -1,0 +1,26 @@
+.container {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  background-color: var(--Secondary);
+  border-radius: 50%;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms;
+  transform: translate(5rem) scale(0);
+  z-index: 50;
+  cursor: pointer;
+  box-shadow: 0 0 0.625rem 0px var(--BlackShadow);
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+  transform: translateY(0.125rem);
+}
+
+.svg > * {
+  fill: var(--White);
+}

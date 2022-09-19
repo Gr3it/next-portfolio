@@ -1,9 +1,11 @@
+import styles from "../styles/viewproject.module.css";
+
 export default function ViewProject() {
   return (
-    <a href="#project" className="view-project-container">
-      <h3 className={"view-project buttons-text"}>View Projects</h3>
+    <a href="#project" className={styles.container}>
+      <h3 className={styles.text}>View Projects</h3>
       <svg
-        className="view-project-svg"
+        className={styles.svg}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
       >

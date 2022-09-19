@@ -4,8 +4,6 @@ import CTA from "./CTA";
 import MenuElement from "./MenuElement";
 import Container from "./container";
 
-//import useWindowSize from "../hook/useWindowSize";
-
 import styles from "../styles/menu.module.css";
 
 export default function Menu({ handleModalOpen }) {

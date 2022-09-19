@@ -29,8 +29,11 @@ export default function Footer() {
             </a>
             <p className={styles.email}>
               Email: <br />
-              <a href="mailto:contact@emanuelezini.com" className={styles.link}>
-                contact@emanuelezini.com
+              <a
+                href="mailto:emanuele.zini11+work@gmail.com"
+                className={styles.link}
+              >
+                emanuele.zini11+work@gmail.com
               </a>
             </p>
             <p className={styles.copyright}>

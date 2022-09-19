@@ -13,6 +13,8 @@ import FAB from "../components/FAB";
 import ResumeButton from "../components/ResumeButton";
 
 import styles from "../styles/home.module.css";
+import Container from "../components/container";
+import Watermark from "../components/Watermark";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -83,22 +85,30 @@ export default function Home() {
       <Menu handleModalOpen={() => handleModalOpen()}></Menu>
 
       {/* Home */}
-      {/* <section className="home container-large" id="home">
-          <h6 className="watermark-text watermark home-watermark">PARTNER</h6>
-          <div className="home-left-column">
-            <h2 className="home-subtitle">
+      <Container type={"large"}>
+        <section className={styles.home} id="home">
+          <Watermark
+            property={{
+              top: "50%",
+              transform: "translate(-50%, -50%) translate(20rem, -15rem)",
+            }}
+          >
+            PARTNER
+          </Watermark>
+          <div className={styles["left-column"]}>
+            <h2 className={styles.subtitle}>
               Smart Contract Engineer & Web Developer
             </h2>
-            <h1 className="home-title">
+            <h1 className={styles.title}>
               Emanuele <br />
               Zini
             </h1>
-            <div className="home-cta" ref={cta}>
+            <div className={styles.cta} ref={cta}>
               <CTA variant="base" handleModalOpen={() => handleModalOpen()} />
               <ViewProject />
             </div>
           </div>
-          <div className="home-SVG">
+          <div className={styles.svg}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 607.061 372.5">
               <g id="SVG" transform="translate(-2012 -505.105)">
                 <path
@@ -307,18 +317,18 @@ export default function Home() {
               </g>
             </svg>
           </div>
-        </section> */}
+        </section>
+      </Container>
       {/* Home End */}
 
       {/* Project */}
-      {/* <section className="flex-columns container-small" id="project">
-          <h6 className="watermark-text watermark project-watermark">
-            EXPERIENCE
-          </h6>
-          <div className="section-title-container">
-            <h2 className="section-title">My Projects</h2>
+      <Container type="small">
+        <section className={styles.section} id="project">
+          <Watermark property={{ "margin-top": "-5rem" }}>EXPERIENCE</Watermark>
+          <div className={styles["section-title-container"]}>
+            <h2 className={styles["section-title"]}>My Projects</h2>
             <svg
-              className="section-title-svg"
+              className={styles["section-title-svg"]}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 143 25.22"
             >
@@ -332,13 +342,14 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="project-container">
+          <div className={styles["project-container"]}>
             <ProjectCard
               title="Crypto Price Tracker"
               tags="HTML, CSS, Javascript, React"
               date="November 2021"
               url="crypto-price-tracker"
               img="CryptoPriceTrackerPreview.png"
+              dimension={{ width: 1000, height: 800 }}
             />
             <ProjectCard
               title="Color Screentest"
@@ -346,6 +357,7 @@ export default function Home() {
               date="August 2021"
               url="color-screentest"
               img="RGBColorPreview.png"
+              dimension={{ width: 800, height: 800 }}
             />
             <ProjectCard
               title="Hotel Meano"
@@ -353,6 +365,7 @@ export default function Home() {
               date="April - May 2021"
               url="hotel-meano"
               img="HotelMeanoPreview.png"
+              dimension={{ width: 1000, height: 800 }}
             />
             <ProjectCard
               title="Flynet"
@@ -360,20 +373,23 @@ export default function Home() {
               date="April - May 2021"
               url="flynet"
               img="FlynetPreview.png"
+              dimension={{ width: 1000, height: 800 }}
             />
           </div>
-        </section> */}
+        </section>
+      </Container>
       {/* Project End */}
 
       {/* Experiments */}
-      {/* <section className="flex-columns container-small" id="experiments">
-          <h6 className="watermark-text watermark experiments-watermark">
+      <Container type="small">
+        <section className={styles.section} id="experiments">
+          <Watermark property={{ "margin-top": "-5rem" }}>
             REVOLUTIONAL
-          </h6>
-          <div className="section-title-container">
-            <h2 className="section-title">My Experiments</h2>
+          </Watermark>
+          <div className={styles["section-title-container"]}>
+            <h2 className={styles["section-title"]}>My Experiments</h2>
             <svg
-              className="section-title-svg"
+              className={styles["section-title-svg"]}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 143 25.22"
             >
@@ -387,37 +403,40 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="experiments-container">
+          <div className={styles["experiments-container"]}>
             <ExperimentBubble
               title="3D Building Plan"
               link="https://github.com/Gr3it/Building_plant"
               img="3Dbuilding.png"
+              imgDimension={{ width: 1054, height: 720 }}
             />
             <ExperimentBubble
               dimension="28.125rem"
               title="Loading Animation"
               link="https://github.com/Gr3it/learning-loading-animation"
               img="LoadingAnimation.png"
+              imgDimension={{ width: 500, height: 500 }}
             />
             <ExperimentBubble
               dimension="25rem"
               title="Gradient color text"
               link="https://github.com/Gr3it/learning-gradient-text"
               img="GradientColorText.png"
+              imgDimension={{ width: 1000, height: 1000 }}
             />
           </div>
-        </section> */}
+        </section>
+      </Container>
       {/* Experiments End */}
 
       {/* About */}
-      {/* <section className="flex-columns container-large" id="about">
-          <h6 className="watermark-text watermark about-watermark">
-            PASSIONATE
-          </h6>
-          <div className="section-title-container">
-            <h2 className="section-title">About Me</h2>
+      <Container type="large">
+        <section className={styles.section} id="about">
+          <Watermark property={{ "margin-top": "-5rem" }}>PASSIONATE</Watermark>
+          <div className={styles["section-title-container"]}>
+            <h2 className={styles["section-title"]}>About Me</h2>
             <svg
-              className="section-title-svg"
+              className={styles["section-title-svg"]}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 143 25.22"
             >
@@ -432,11 +451,11 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="about-container">
-            <div className="about-first-section-container">
-              <div className="about-text">
-                <h1 className="sub-section-title">Who I Am</h1>
-                <p className="paragraph">
+          <div className={styles["about-container"]}>
+            <div className={styles["about-first-section-container"]}>
+              <div className={styles["about-text"]}>
+                <h1 className={styles["sub-section-title"]}>Who I Am</h1>
+                <p className={styles.text}>
                   I am a bachelor's student based in Trento, Italy. While
                   following an IT study formation, I am also a passionate in
                   Blockchain Development, Web Development and UI/UX design. I
@@ -453,7 +472,7 @@ export default function Home() {
               </div>
 
               <svg
-                className="about-SVG"
+                className={styles["about-SVG"]}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 530.686 626.848"
               >
@@ -648,13 +667,18 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h6 className="watermark-text watermark passion-watermark">
+              <Watermark
+                property={{
+                  "margin-top": "-15rem",
+                  transform: "translate(-60%)",
+                }}
+              >
                 CREATIVE
-              </h6>
-              <h1 className="sub-section-title">Interests</h1>
+              </Watermark>
+              <h1 className={styles["sub-section-title"]}>Interests</h1>
             </div>
 
-            <div className="about-passion-container">
+            <div className={styles["about-passion-container"]}>
               <PassionCard
                 title="Crypto"
                 text="In recent times I got more and more interested in cryptocurrency. I studied the characteristics of Defi and Cefi and, more specifically, the functioning and code behind smart contracts. With the expertise gained, I developed Web Applications that interact with Blockchains."
@@ -678,29 +702,41 @@ export default function Home() {
               />
             </div>
           </div>
-        </section> */}
+        </section>
+      </Container>
       {/* About End */}
 
       {/* Cta Section */}
-      {/* <section className="flex-columns" id="cta-section">
-          <svg
-            className="cta-section-svg "
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 2063.809 212.358"
-          >
-            <path
-              d="M0,90.545l68.794-8.876c68.794-8.544,206.381-26.794,343.968-8.793,137.587,17.669,275.175,70.758,412.762,84.031s275.175-13.272,412.762-13.272,275.175,26.545,412.762,17.669c137.587-8.544,275.174-53.338,343.968-75.155L2063.809,64V276.358H0Z"
-              transform="translate(0 -64)"
-              fill="#0d6ede"
-            />
-          </svg>
-          <div className="cta-section-bcg">
-            <div className="container-large flex-columns align-center cta-section-container">
-              <h6 className="watermark-text watermark cta-watermark">
+      <section className={styles.section} id="cta-section">
+        <svg
+          className={styles["cta-section-svg"]}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 2063.809 212.358"
+        >
+          <path
+            d="M0,90.545l68.794-8.876c68.794-8.544,206.381-26.794,343.968-8.793,137.587,17.669,275.175,70.758,412.762,84.031s275.175-13.272,412.762-13.272,275.175,26.545,412.762,17.669c137.587-8.544,275.174-53.338,343.968-75.155L2063.809,64V276.358H0Z"
+            transform="translate(0 -64)"
+            fill="#0d6ede"
+          />
+        </svg>
+        <div className={styles["cta-section-bgc"]}>
+          <Container type="large">
+            <div className={styles["cta-section-container"]}>
+              <Watermark
+                property={{
+                  "margin-top": "-6rem",
+                  color: "var(--White5)",
+                  "z-index": "0",
+                  "white-space": "nowrap",
+                  "user-select": "none",
+                }}
+              >
                 GET IN TOUCH
-              </h6>
-              <h1 className="cta-section-title">Interested to work with me?</h1>
-              <div className="cta-section-buttons">
+              </Watermark>
+              <h1 className={styles["cta-section-title"]}>
+                Interested to work with me?
+              </h1>
+              <div className={styles["cta-section-buttons"]}>
                 <CTA
                   variant="white"
                   handleModalOpen={() => handleModalOpen()}
@@ -708,8 +744,9 @@ export default function Home() {
                 <ResumeButton />
               </div>
             </div>
-          </div>
-        </section> */}
+          </Container>
+        </div>
+      </section>
       {/* Cta Section End */}
 
       {/* CTA Fixed */}

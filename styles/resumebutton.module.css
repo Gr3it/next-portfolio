@@ -1,0 +1,25 @@
+.button-container {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: var(--White);
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container:hover {
+  cursor: pointer;
+}
+
+.button-svg {
+  width: 1.5rem;
+  height: 2rem;
+}
+
+.buttons-text {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: inherit;
+  user-select: none;
+}

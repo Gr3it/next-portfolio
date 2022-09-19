@@ -1,8 +1,14 @@
+import styles from "../styles/resumebutton.module.css";
+
 export default function ResumeButton() {
   return (
-    <a href="/" className="resume-button-container">
+    <a
+      href="/Zini_Emanuele_English.pdf"
+      download="Emanuele Zini CV"
+      className={styles["button-container"]}
+    >
       <svg
-        className="resume-button-svg"
+        className={styles["button-svg"]}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 760.07 1000"
       >
@@ -17,14 +23,12 @@ export default function ResumeButton() {
           fill="#fff"
         />
       </svg>
-      <a
-        href="/Zini_Emanuele_English.pdf"
-        download="Emanuele Zini CV"
-        className="buttons-text"
+      <div
+        className={styles["buttons-text"]}
         style={{ textDecoration: "underline" }}
       >
         Resume
-      </a>
+      </div>
     </a>
   );
 }
