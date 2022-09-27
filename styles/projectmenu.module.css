@@ -1,0 +1,49 @@
+.menu {
+  height: 6.875rem;
+  position: fixed;
+  top: 0;
+  background-color: var(--Backgound);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back {
+  width: 2rem;
+  cursor: pointer;
+  transition: all 100ms ease-out;
+}
+
+.menu-back:hover {
+  transform: scale(1.25);
+}
+
+.link-container {
+  margin-left: auto;
+  display: flex;
+  gap: 5.25rem;
+}
+
+.link {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.link > svg {
+  width: 2.5rem;
+  transform: translate(0, -0.125rem);
+}

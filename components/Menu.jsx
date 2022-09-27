@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import CTA from "./CTA";
 import MenuElement from "./MenuElement";
-import Container from "./container";
+import Container from "./Container";
 
 import styles from "../styles/menu.module.css";
 
@@ -35,8 +35,6 @@ export default function Menu({ handleModalOpen }) {
   if (hamburgerActive && width > 800) {
     handleMenuClose();
   }
-
-  console.log(width);
 
   return (
     <header className={styles.background}>

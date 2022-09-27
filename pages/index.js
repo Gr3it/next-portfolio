@@ -13,10 +13,15 @@ import FAB from "../components/FAB";
 import ResumeButton from "../components/ResumeButton";
 
 import styles from "../styles/home.module.css";
-import Container from "../components/container";
+import Container from "../components/Container";
 import Watermark from "../components/Watermark";
 
 export default function Home() {
+  const color = "#0d6ede";
+  if (typeof window !== "undefined") {
+    document.documentElement.style.setProperty("--Scrollbar-color", color);
+  }
+
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
@@ -324,7 +329,7 @@ export default function Home() {
       {/* Project */}
       <Container type="small">
         <section className={styles.section} id="project">
-          <Watermark property={{ "margin-top": "-5rem" }}>EXPERIENCE</Watermark>
+          <Watermark property={{ marginTop: "-5rem" }}>EXPERIENCE</Watermark>
           <div className={styles["section-title-container"]}>
             <h2 className={styles["section-title"]}>My Projects</h2>
             <svg
@@ -383,9 +388,7 @@ export default function Home() {
       {/* Experiments */}
       <Container type="small">
         <section className={styles.section} id="experiments">
-          <Watermark property={{ "margin-top": "-5rem" }}>
-            REVOLUTIONAL
-          </Watermark>
+          <Watermark property={{ marginTop: "-5rem" }}>REVOLUTIONAL</Watermark>
           <div className={styles["section-title-container"]}>
             <h2 className={styles["section-title"]}>My Experiments</h2>
             <svg
@@ -432,7 +435,7 @@ export default function Home() {
       {/* About */}
       <Container type="large">
         <section className={styles.section} id="about">
-          <Watermark property={{ "margin-top": "-5rem" }}>PASSIONATE</Watermark>
+          <Watermark property={{ marginTop: "-5rem" }}>PASSIONATE</Watermark>
           <div className={styles["section-title-container"]}>
             <h2 className={styles["section-title"]}>About Me</h2>
             <svg
@@ -669,7 +672,7 @@ export default function Home() {
             <div>
               <Watermark
                 property={{
-                  "margin-top": "-15rem",
+                  marginTop: "-15rem",
                   transform: "translate(-60%)",
                 }}
               >
@@ -724,11 +727,11 @@ export default function Home() {
             <div className={styles["cta-section-container"]}>
               <Watermark
                 property={{
-                  "margin-top": "-6rem",
+                  marginTop: "-6rem",
                   color: "var(--White5)",
-                  "z-index": "0",
-                  "white-space": "nowrap",
-                  "user-select": "none",
+                  zIndex: "0",
+                  whiteSpace: "nowrap",
+                  userSelect: "none",
                 }}
               >
                 GET IN TOUCH

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Container from "./container";
+import Container from "./Container";
 
 import styles from "../styles/footer.module.css";
 
