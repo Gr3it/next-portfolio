@@ -20,7 +20,7 @@ export default function Footer() {
               />
             </div>
             <a
-              href="https://github.com/Gr3it/portfolio"
+              href="https://github.com/Gr3it/next-portfolio"
               rel="noreferrer noopener"
               target="_blank"
               className={styles.link}
